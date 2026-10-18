@@ -1,0 +1,6 @@
+print("==== TAB47 STORE ====")
+print("NoteBook   RS 60")
+print("Pen        RS 15")
+print("Eraser     RS 5")
+print("---------------------")
+print("TOTAL      RS", 60 +15 +5)

@@ -1,0 +1,40 @@
+
+def calculate_percentage(marks_list):
+    return sum(marks_list) / len(marks_list)
+
+def get_grade(percentage):
+    if percentage >= 90:
+        return "A"
+    elif percentage >= 75:
+        return "B"
+    elif percentage >= 60:
+        return "C"
+    elif percentage >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+def get_gpa(percentage):
+    return percentage / 10
+
+def generate_report(name, marks_list):
+    percentage = calculate_percentage(marks_list)
+    grade = get_grade(percentage)
+    gpa = get_gpa(percentage)
+
+    print("\n===== REPORT CARD =====")
+    print(f"Name: {name}")
+    print(f"Subjects: {len(marks_list)}")
+    print(f"Percentage: {percentage:.1f}%")
+    print(f"Grade: {grade}")
+    print(f"GPA: {gpa:.1f}")
+
+name = input("Enter student name: ")
+
+marks_list = []
+
+for i in range(1, 6):
+    marks = float(input(f"Enter marks for subject {i} (0-100): "))
+    marks_list.append(marks)
+
+generate_report(name, marks_list)
