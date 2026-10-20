@@ -1,0 +1,40 @@
+========== LOG ANALYSIS REPORT ==========
+Log file: application.log
+Total log entries: 150
+
+1. LOG LEVEL COUNTS
+-------------------
+INFO:    95
+WARNING: 33
+ERROR:   22
+
+2. ERROR DETAILS
+----------------
+1. 2026-07-11 08:16:07 - Failed to process request
+2. 2026-07-11 08:43:34 - Failed to process request
+3. 2026-07-11 09:27:09 - Database timeout
+4. 2026-07-11 09:27:30 - Database timeout
+5. 2026-07-11 09:53:08 - Failed to process request
+6. 2026-07-11 10:24:40 - Database timeout
+7. 2026-07-11 10:57:29 - Failed to process request
+8. 2026-07-11 11:53:28 - Database timeout
+9. 2026-07-11 11:57:47 - Authentication failed
+10. 2026-07-11 12:49:40 - File not found
+11. 2026-07-11 14:57:50 - File not found
+12. 2026-07-11 15:00:44 - Failed to process request
+13. 2026-07-11 15:42:10 - Authentication failed
+14. 2026-07-11 15:47:57 - File not found
+15. 2026-07-11 17:09:14 - Authentication failed
+16. 2026-07-11 18:11:32 - File not found
+17. 2026-07-11 18:14:56 - Database timeout
+18. 2026-07-11 18:19:30 - Connection refused
+19. 2026-07-11 18:19:42 - Database timeout
+20. 2026-07-11 19:08:06 - Authentication failed
+21. 2026-07-11 19:35:53 - Failed to process request
+22. 2026-07-11 19:53:44 - Database timeout
+
+3. PEAK ERROR HOUR
+------------------
+18:00-18:59 (4 errors)
+
+=========================================
