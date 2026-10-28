@@ -24,3 +24,23 @@ elif num1%2!=0 and num2%2!=0:
     print("Both ood")
 else:
     print("Mixed")
+    
+"""Number Analyzer
+Comparison and modulo operators
+Take two numbers from the user and report on their relationship.
+
+Print:
+• Which number is larger (or whether they are equal)
+• The remainder when the larger is divided by the smaller
+• Whether both are even, both odd, or mixed
+
+Example:
+
+Enter first number: 12
+Enter second number: 8
+Larger: 12
+Remainder of 12 / 8: 4
+Both even
+
+Hint: the modulo operator % gives you the remainder, and a number is even when n % 2 == 0.
+"""

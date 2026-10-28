@@ -21,3 +21,21 @@ print("\nOriginal:", message)
 print("Encoded: ", encoded)
 print("Decoded: ", decoded)
 print("Round-trip successful:", decoded == message)
+
+"""Caesar Cipher
+Character math and preserving structure
+Build an encoder and a decoder for a Caesar cipher with a given shift.
+
+Rules:
+• Shift letters by the given amount, wrapping around (z + 1 -> a)
+• Preserve case (uppercase stays uppercase, lowercase stays lowercase)
+• Leave non-letters (spaces, digits, punctuation) unchanged
+
+Demonstrate a round-trip: encode a message, then decode it back to the original to prove it matches.
+
+Example (shift = 3):
+
+Original: Hello, Tab47!
+Encoded:  Khoor, Wde47!
+Decoded:  Hello, Tab47!
+"""

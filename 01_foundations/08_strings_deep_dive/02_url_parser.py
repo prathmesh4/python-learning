@@ -31,3 +31,25 @@ if query_string:
         value = key_value[1] if len(key_value) > 1 else ""
 
         print(f"  {key} = {value}")
+
+"""URL Parser
+Parsing structured text with string methods only
+Given a URL string, break it into parts using only string methods (no urllib):
+• protocol (before ://)
+• domain (after :// up to the next /)
+• path (after the domain)
+• query parameters as key/value pairs (after the ?)
+
+Example:
+
+url = "https://shop.tab47.com/items/list?category=books&sort=price"
+
+Protocol: https
+Domain: shop.tab47.com
+Path: /items/list
+Query:
+  category = books
+  sort = price
+
+Hint: split() on "://", "/", "?", "&", and "=" will get you a long way.
+"""        

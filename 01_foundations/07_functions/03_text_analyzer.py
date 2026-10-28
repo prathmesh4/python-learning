@@ -51,3 +51,27 @@ result = analyze(text)
 print("\n===== TEXT ANALYSIS =====")
 for statistic, value in result.items():
     print(f"{statistic}: {value}")
+
+"""Text Analyzer 
+Returning structured data from helper functions
+Write analyze(text) that returns a dictionary of statistics, where each statistic is computed by its own small helper function:
+• word_count
+• char_count (excluding spaces)
+• sentence_count (split on . ! ?)
+• avg_word_length (rounded to 1 decimal)
+• most_common_word
+• longest_word
+
+Example:
+
+text = "Python is fun. Python is powerful!"
+
+analyze(text) -> {
+  'word_count': 6,
+  'char_count': 28,
+  'sentence_count': 2,
+  'avg_word_length': 4.7,
+  'most_common_word': 'Python',
+  'longest_word': 'powerful'
+}
+"""    

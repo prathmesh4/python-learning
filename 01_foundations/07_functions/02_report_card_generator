@@ -38,3 +38,22 @@ for i in range(1, 6):
     marks_list.append(marks)
 
 generate_report(name, marks_list)
+
+"""
+Report Card Generator
+Composing several small functions together
+Build a report card for a student across at least 5 subjects. Write these functions and have them call each other:
+• calculate_percentage(marks_list) -> average percentage
+• get_grade(percentage)            -> letter grade
+• get_gpa(percentage)              -> GPA on a 10-point scale
+• generate_report(name, marks_list) -> prints a full formatted report using the above
+
+Example:
+
+===== REPORT CARD =====
+Name: Prathmesh
+Subjects: 5
+Percentage: 84.0%
+Grade: B
+GPA: 8.4
+"""
