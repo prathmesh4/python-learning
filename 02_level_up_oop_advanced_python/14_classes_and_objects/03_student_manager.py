@@ -80,3 +80,43 @@ print(f"Students remaining: {len(manager.students)}")
 manager.display_all()
 print("Trying to remove an unknown student...")
 manager.remove_by_name("Rohan")
+
+"""Student Manager
+You'll practice
+Using objects inside objects — a class that manages a collection of other objects
+Create two classes: Student and StudentManager.
+
+Student class:
+- Attributes: name, marks, city
+- Methods: calculate_grade() (A+ for 90+, A for 80+, B for 70+, C for 60+, F otherwise), display()
+
+StudentManager class:
+- Internally holds a list of Student objects (not dicts — actual Student objects)
+- Methods:
+  - add_student(name, marks, city) — creates a Student and adds it to the internal list
+  - remove_by_name(name) — removes the student with that name. Print a warning if not found.
+  - get_topper() — returns the Student with the highest marks
+  - get_average() — returns the average marks across all students
+  - get_students_by_city(city) — returns a list of Students from that city
+  - display_all() — prints all students in a formatted table
+
+Test with at least 6 students across 3 different cities. Demonstrate every method.
+
+Example output:
+
+All Students:
+Name          Marks   City       Grade
+Amit          85      Pune       A
+Priya         92      Mumbai     A+
+Rahul         67      Delhi      C
+Sara          78      Pune       B
+Karan         95      Mumbai     A+
+Neha          55      Delhi      F
+
+Topper: Karan (95)
+Average: 78.67
+Students from Pune: Amit, Sara
+
+Removing Rahul...
+Students remaining: 5
+"""

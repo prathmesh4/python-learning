@@ -47,3 +47,25 @@ dept_avg = {
     for d in {s['department'] for s in students}
 }
 print(dept_avg)
+
+"""Student Data Transformer
+Dict comprehensions and filtering
+Given a list of student dictionaries (each with name, city, marks, department), produce — using ONLY comprehensions:
+• a {name: grade} dictionary
+• a filtered list of students from a given city whose marks are above a cutoff
+• a list of names sorted by marks (highest first)
+• a {department: average_marks} dictionary
+
+Example:
+
+students = [
+  {'name':'A','city':'Delhi','marks':82,'department':'CS'},
+  {'name':'B','city':'Mumbai','marks':91,'department':'CS'},
+  ...
+]
+
+name -> grade: {'A':'B', 'B':'A', ...}
+Delhi & marks>80: ['A']
+By marks: ['B', 'A', ...]
+dept avg: {'CS': 86.5, ...}
+"""

@@ -23,3 +23,23 @@ print("-" * 33)
 
 for row in rows[1:]:
     print("{:<15} {:<8} {:<10}".format(row[0],row[1],row[2]))
+    
+"""Student CSV Writer
+Writing and reading CSV files
+Collect 5 student records (name, age, grade) from the user and write them to a CSV file with a header row. Then read the file back and display its contents as a neat table.
+
+Example (students.csv):
+
+name,age,grade
+Rahul,20,A
+Priya,19,B
+...
+
+Displayed back:
+
+Name    Age   Grade
+Rahul   20    A
+Priya   19    B
+
+Use the with statement so the file is always closed properly.
+"""    

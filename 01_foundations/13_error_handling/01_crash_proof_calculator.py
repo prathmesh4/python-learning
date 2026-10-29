@@ -38,3 +38,20 @@ while True:
         result = num1 / num2
 
     print("Result:", result)
+    
+"""Crash-Proof Calculator
+try/except and retry loops
+Build a calculator that never crashes. The user enters two numbers and an operator (+, -, *, /). Handle:
+• non-numeric input (ask again)
+• division by zero (show a friendly message)
+• an invalid operator
+
+Keep looping until the user provides valid input (or chooses to quit).
+
+Example:
+
+Number: abc   -> That's not a number, try again.
+Number: 10
+Number: 0
+Operator: /   -> Cannot divide by zero!
+"""

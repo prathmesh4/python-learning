@@ -65,3 +65,40 @@ engineering.add_employee(Developer("Karan", 30, "E106", 55000, "C++", 15))
 engineering.add_employee(Intern("Meera", 22, "E107", 25000, 12000, 3))
 engineering.add_employee(Developer("Arjun", 29, "E108", 48000, "Python", 10))      
 engineering.display_report()            
+
+"""Employee Hierarchy
+Multi-level inheritance with different behavior per subclass
+Build an employee system with inheritance:
+
+Base class: Person
+- Attributes: name, age
+- Method: display()
+
+Child: Employee(Person)
+- Additional attributes: emp_id, base_salary
+- Method: calculate_pay() returns base_salary
+
+Grandchildren (inherit from Employee):
+- Developer — additional: language, overtime_hours. calculate_pay() = base_salary + (overtime_hours × 500)
+- Manager — additional: department, team_size. calculate_pay() = base_salary + (team_size × 2000)
+- Intern — additional: stipend, duration_months. calculate_pay() = stipend (ignores base_salary)
+
+Create a Department class (NOT inheriting from anything — this is composition):
+- Holds a list of Employee objects
+- Methods: total_payroll(), average_salary(), display_report()
+
+Create at least 8 employees across all types. Print the department report.
+
+Example output:
+
+Engineering Department Report:
+Name            Type         Pay
+Amit            Developer    Rs 62,500
+Priya           Manager      Rs 80,000
+Rahul           Developer    Rs 55,000
+Sara            Intern       Rs 15,000
+...
+
+Total Payroll: Rs 4,50,000
+Average Salary: Rs 56,250
+"""

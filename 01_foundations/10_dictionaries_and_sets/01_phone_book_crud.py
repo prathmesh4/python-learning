@@ -42,3 +42,24 @@ while True:
         break
     else:
         print("Invalid Choice! Please enter valid choice.")
+        
+"""Phone Book
+Dictionary CRUD with a menu loop
+Build a contact manager backed by a dictionary (name -> phone number). Offer a menu that loops until the user exits:
+• Add a contact
+• Search by name
+• Delete a contact
+• Show all contacts
+
+Handle the "contact not found" case cleanly instead of crashing.
+
+Example:
+
+> add    Prathmesh 8857935193
+> add    Pranav 9123456780
+> search Prathmesh   -> Prathmesh: 8857935193
+> delete Pranav   -> Deleted Pranav
+> show           -> Prathmesh: 8857935193
+
+Hint: use .get() so a missing name returns None instead of raising a KeyError.
+"""        

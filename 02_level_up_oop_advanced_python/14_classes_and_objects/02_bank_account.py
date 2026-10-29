@@ -55,3 +55,42 @@ except ValueError as e:
     print(f"Error: {e}")
 
 print(f"Prathmesh current balance: Rs {account_a.get_balance():,.2f}")
+
+"""Bank Account
+Methods with validation, object interaction, and error handling
+Create a BankAccount class with owner (string) and balance (number, default 0) attributes.
+
+Add the following methods:
+- deposit(amount) — adds to balance. Raise ValueError if amount is zero or negative.
+- withdraw(amount) — subtracts from balance. Raise ValueError if amount is zero or negative. Raise ValueError if amount exceeds current balance (no overdraft allowed).
+- get_balance() — returns the current balance
+- display() — prints owner name and current balance formatted as currency
+
+Then create two accounts and implement a transfer between them:
+- Withdraw from Account A
+- Deposit into Account B
+- Print both accounts before and after the transfer to verify
+
+Test all edge cases:
+- Depositing a negative amount
+- Withdrawing more than the balance
+- Withdrawing zero
+
+Each edge case should print the error message, not crash the program.
+
+Example output:
+
+Before Transfer:
+Amit: Rs 10,000.00
+Priya: Rs 5,000.00
+
+Transferring Rs 3,000 from Amit to Priya...
+
+After Transfer:
+Amit: Rs 7,000.00
+Priya: Rs 8,000.00
+
+Testing edge cases:
+Error: Amount must be positive
+Error: Insufficient funds
+"""

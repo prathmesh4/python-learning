@@ -88,3 +88,22 @@ while True:
         break
     else:
         print("Invalid choice! Please try again.")
+        
+"""Stack & Queue Implementation
+Modeling data structures with lists
+Implement two classic data structures using Python lists, exposed through a menu:
+• Stack (Last-In-First-Out): push, pop, peek
+• Queue (First-In-First-Out): enqueue, dequeue, peek
+
+The program should keep running and maintain its state until the user chooses to exit. Handle empty-structure cases gracefully (e.g. popping from an empty stack).
+
+Example:
+
+1) Push  2) Pop  3) Peek  4) Switch  5) Exit
+> push 10
+> push 20
+> peek    -> Top: 20
+> pop     -> Removed: 20
+> pop     -> Removed: 10
+> pop     -> Stack is empty!
+"""        

@@ -58,4 +58,35 @@ print("Trying BrokenShape()...")
 try:
     BrokenShape()
 except TypeError as e:
-    print(f"TypeError : {e}")                         
+    print(f"TypeError : {e}")                  
+    
+"""Shape with ABC
+Abstract base classes and enforced method implementation
+Create an abstract Shape class using ABC and @abstractmethod:
+
+- Abstract methods: area(), perimeter()
+- Concrete method: describe() — prints "This is a {class_name} with area {area}"
+
+Create three subclasses that implement both abstract methods:
+- Circle(radius)
+- Rectangle(length, width)
+- Triangle(a, b, c) — perimeter is sum of sides, area uses Heron's formula
+
+Demonstrate:
+1. Create one of each shape, call describe() on each via a loop (polymorphism)
+2. Try creating Shape() directly — show the TypeError
+3. Create a broken subclass that only implements area() but not perimeter() — show that it also can't be instantiated
+
+Example output:
+
+This is a Circle with area 78.54
+This is a Rectangle with area 24.00
+This is a Triangle with area 6.00
+
+Trying Shape()...
+TypeError: Can't instantiate abstract class Shape with abstract methods area, perimeter
+
+Trying BrokenShape()...
+TypeError: Can't instantiate abstract class BrokenShape with abstract method perimeter
+
+"""

@@ -74,3 +74,25 @@ while True:
         break
     else:
         print("Invalid choice. Please enter a number from 1 to 5.")
+        
+"""Expense Tracker with Persistence
+JSON persistence across program runs
+Build a menu-driven expense tracker that survives restarts by saving to a JSON file. Support:
+• Add an expense (amount, category, note)
+• View all expenses
+• View expenses by category
+• Show total spending
+• Save & exit (write to the JSON file)
+
+On startup, load existing expenses from the file if it exists.
+
+Example:
+
+> add 250 Food "lunch"
+> add 1200 Travel "cab"
+> total   -> Rs 1450
+> exit    -> saved to expenses.json
+
+(run the program again)
+-> previous expenses are still there
+"""        

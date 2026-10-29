@@ -47,3 +47,26 @@ shapes=[Circle("Red",5),
         ]           
 for shape in shapes:
     shape.display()                
+    
+"""Shape Family
+Basic inheritance with shared base class and method overriding
+Create a Shape base class with name and color attributes.
+
+Create three subclasses:
+- Circle(Shape) — additional attribute: radius. Implements area().
+- Rectangle(Shape) — additional attributes: length, width. Implements area().
+- Triangle(Shape) — additional attributes: base, height. Implements area().
+
+Each subclass should:
+- Call super().__init__() to handle name and color
+- Override display() to print shape-specific info including area
+
+Create a mixed list of shapes and loop through it, calling display() on each. This should work without checking what type each shape is — polymorphism.
+
+Example output:
+
+Circle (Red): radius=5, area=78.54
+Rectangle (Blue): 4x6, area=24.00
+Triangle (Green): base=3, height=8, area=12.00
+Circle (Yellow): radius=10, area=314.16
+"""    

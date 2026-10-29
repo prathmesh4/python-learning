@@ -67,3 +67,37 @@ print(
     f'is_valid_email("invalid-email")'
     f'{Employee.is_valid_email("invalid-email")}'
 )    
+
+"""Employee Factory
+Alternative constructors with @classmethod — creating objects from different data formats
+Create an Employee class with:
+
+Class attributes:
+- company_name = "Tab47 Inc"
+- employee_count — auto-increments on each creation
+
+Instance attributes:
+- name, emp_id, email, department
+
+Three ways to create an Employee (class methods):
+- Standard __init__(name, emp_id, email, department)
+- from_dict(data) — creates from a dictionary like {"name": "Amit", "emp_id": "E001", "email": "amit@tab47.com", "department": "Engineering"}
+- from_csv_line(line) — creates from a CSV string like "Amit,E001,amit@tab47.com,Engineering"
+
+Static method:
+- is_valid_email(email) — returns True if email contains "@" and "." after the "@"
+
+Instance method:
+- display() — prints all employee info including company name
+
+Create employees using all three methods. Validate emails. Print the total count.
+
+Example output:
+
+[Tab47 Inc] Amit (E001) — Engineering — amit@tab47.com
+[Tab47 Inc] Priya (E002) — Design — priya@tab47.com
+[Tab47 Inc] Rahul (E003) — Marketing — rahul@tab47.com
+
+Total employees: 3
+is_valid_email("amit@tab47.com"): True
+is_valid_email("invalid-email"): False"""

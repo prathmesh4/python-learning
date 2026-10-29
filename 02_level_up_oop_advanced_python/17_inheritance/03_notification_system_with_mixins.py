@@ -104,3 +104,49 @@ urgent.send_with_retry(max_attempts=3)
 print()
 print("MRO:")
 print(" → ".join(cls.__name__ for cls in UrgentEmail.__mro__))
+
+"""Notification System with Mixins
+Multiple inheritance, mixins, and understanding MRO
+Build a notification system that uses both regular inheritance and mixins.
+
+Base class: Notification
+- Attributes: message, priority (1-5, where 5 is highest)
+- Method: send() — prints the notification (simulated, not actual sending)
+
+Subclasses:
+- EmailNotification(Notification) — additional: to_address, subject
+- SMSNotification(Notification) — additional: phone_number, char_limit=160. If message exceeds char_limit, truncate and add "..."
+- PushNotification(Notification) — additional: device_id, ttl_seconds
+
+Mixin classes (small utility classes, no __init__):
+- LoggableMixin — adds a log() method that prints a timestamped log entry: "[2024-01-15 14:30:00] Sent: <notification type> to <recipient>"
+- RetryableMixin — adds a send_with_retry(max_attempts=3) method that calls send() and simulates random failures (use random.random() < 0.5 to simulate failure). Retries up to max_attempts times, prints each attempt.
+
+Combined class:
+- UrgentEmail(EmailNotification, LoggableMixin, RetryableMixin) — inherits from all three
+
+Demonstrate:
+1. Send one of each basic notification type
+2. Send an SMS that exceeds the character limit — verify truncation
+3. Send an UrgentEmail — show logging and retry behavior
+4. Print the MRO of UrgentEmail using UrgentEmail.__mro__ and explain the order
+
+Example output:
+
+[EMAIL] To: amit@email.com | Subject: Meeting | Priority: 3
+Message: Don't forget the standup at 10am
+
+[SMS] To: 9876543210 | Priority: 2
+Message: Your OTP is 4829. Do not share thi...
+
+[PUSH] To: device_abc123 | TTL: 3600s | Priority: 4
+Message: New message received
+
+[URGENT EMAIL] To: boss@company.com | Subject: Server Down | Priority: 5
+[2024-01-15 14:30:00] Sent: UrgentEmail to boss@company.com
+Attempt 1: Failed. Retrying...
+Attempt 2: Success!
+
+MRO: UrgentEmail → EmailNotification → Notification → LoggableMixin → RetryableMixin → object
+
+"""

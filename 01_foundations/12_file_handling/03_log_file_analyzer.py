@@ -128,3 +128,18 @@ with open(REPORT_FILE, "w") as file:
 
 print("\n".join(report))
 print(f"Report saved to {REPORT_FILE}")
+
+"""Log File Analyzer
+Parsing logs and writing a summary report
+First, programmatically generate a sample log file of 100+ lines, each looking like:
+
+2026-07-11 09:15:32 INFO  User logged in
+2026-07-11 09:16:01 ERROR Database timeout
+
+Then parse it and report:
+• the count of each log level (INFO / WARNING / ERROR)
+• every ERROR line together with its timestamp
+• the hour with the most errors (the peak error hour)
+
+Finally, write the summary to a separate output file.
+"""

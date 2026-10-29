@@ -80,3 +80,56 @@ exporters = [
 
 for exporter in exporters:
     export_data(students, exporter)
+    
+"""Data Exporter System
+Abstract contracts with polymorphic usage — write-once, extend-forever pattern
+Create an abstract DataExporter class:
+
+Abstract methods:
+- export(data) — takes a list of dicts, returns formatted string
+- get_format() — returns a string like "CSV", "JSON", etc.
+
+Concrete method:
+- validate(data) — checks that data is a non-empty list of dicts. Raises ValueError if not.
+
+Concrete subclasses:
+- CSVExporter — exports as CSV with headers from dict keys
+- JSONExporter — exports as formatted JSON string (use json.dumps with indent)
+- MarkdownExporter — exports as a Markdown table
+
+Create a function export_data(data, exporter) that:
+1. Calls exporter.validate(data)
+2. Calls exporter.export(data)
+3. Prints the format name and the exported output
+
+Pass the SAME data through all three exporters. The function doesn't care which exporter it gets — polymorphism.
+
+Test data:
+
+students = [
+    {"name": "Amit", "marks": 85, "city": "Pune"},
+    {"name": "Priya", "marks": 92, "city": "Mumbai"},
+    {"name": "Rahul", "marks": 67, "city": "Delhi"},
+]
+
+Example output:
+
+Format: CSV
+name,marks,city
+Amit,85,Pune
+Priya,92,Mumbai
+Rahul,67,Delhi
+
+Format: JSON
+[
+  {"name": "Amit", "marks": 85, "city": "Pune"},
+  ...
+]
+
+Format: Markdown
+| name  | marks | city   |
+|-------|-------|--------|
+| Amit  | 85    | Pune   |
+| Priya | 92    | Mumbai |
+| Rahul | 67    | Delhi  |
+"""    

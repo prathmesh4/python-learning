@@ -38,3 +38,24 @@ print("Below Average: ",",".join(below_average))
 print("Full Leaderboard: ")
 for s , student in enumerate(leaderboard,start=1):
     print(f"{s}.  {student[0]} - {student[1]}")
+    
+"""Student Leaderboard
+Lists of lists and sorting with a key
+Take n students, each stored as [name, marks], into a list of lists. Then produce:
+• The top 3 and bottom 3 students by marks
+• Students above and below the class average
+• The full leaderboard sorted from highest to lowest
+
+Example:
+
+Leaderboard:
+1. Neha    - 95
+2. Arjun   - 88
+3. Sara    - 76
+...
+Class average: 79.5
+Above average: Neha, Arjun
+Below average: Sara, ...
+
+Hint: sorted(students, key=lambda s: s[1], reverse=True) sorts by marks.
+"""    

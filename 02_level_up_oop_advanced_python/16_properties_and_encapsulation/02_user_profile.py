@@ -70,3 +70,38 @@ teen = User("Riya", "riya@email.com", 16)
 adult = User("Neha", "neha@email.com", 20)
 print(f"Age 16 — Adult: {teen.is_adult}")
 print(f"Age 20 — Adult: {adult.is_adult}")
+
+"""User Profile
+Multiple properties with automatic formatting and cross-field validation
+Create a User class with properties for:
+
+- name — getter returns the stored name. Setter strips whitespace and validates: must be non-empty string, at least 2 characters. Raise ValueError otherwise.
+- email — getter returns the stored email. Setter lowercases automatically, validates: must contain "@" and at least one "." after the "@". Raise ValueError otherwise.
+- age — getter returns stored age. Setter validates: must be int, between 0 and 150. Raise ValueError or TypeError as appropriate.
+- is_adult — read-only property, returns True if age >= 18
+
+All attributes should use the _name convention internally.
+
+Demonstrate:
+1. Create a user with valid data
+2. Show that email is automatically lowercased: set "AMIT@Email.COM", get back "amit@email.com"
+3. Show that name is automatically stripped: set "  Amit  ", get back "Amit"
+4. Try every invalid case: empty name, email without @, age = -5, age = "hello", age = 200
+5. Show is_adult for a 16-year-old and a 20-year-old
+
+Example output:
+
+User: Amit, amit@email.com, Age 25 (Adult: True)
+
+Setting email to "PRIYA@GMAIL.COM"...
+Stored as: priya@gmail.com
+
+Setting name to "  Rahul  "...
+Stored as: Rahul
+
+Invalid cases:
+name = "": Error — Name must be at least 2 characters
+email = "invalid": Error — Invalid email format
+age = -5: Error — Age must be between 0 and 150
+age = "hello": Error — Age must be an integer
+"""

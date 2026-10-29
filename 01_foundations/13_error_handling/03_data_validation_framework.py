@@ -108,3 +108,20 @@ if errors:
         print("-", error)
 else:
     print("Validation successful!")
+    
+"""Data Validation Framework
+Custom exceptions and schema validation
+Build validate(data, schema) that checks a dictionary against a schema and returns a list of ALL errors (not just the first one). Define custom exceptions: ValidationError, MissingFieldError, and TypeMismatchError.
+
+A schema entry can specify: type, required, min / max (for numbers), min_length (for strings/lists), and contains.
+
+Example:
+
+schema = {
+  'age':  {'type': int, 'required': True, 'min': 0, 'max': 120},
+  'name': {'type': str, 'required': True, 'min_length': 2},
+}
+
+validate({'age': 200}, schema) ->
+  ["Missing required field: name", "age must be <= 120"]
+  """    

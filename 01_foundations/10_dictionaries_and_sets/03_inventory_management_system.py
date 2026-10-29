@@ -86,3 +86,25 @@ while True:
         break
     else:
         print("Invalid choice! Please try again.")
+
+"""Inventory Management System
+Nested dicts and grouped reporting
+Manage a product inventory where each product has a name, quantity, price, and category. Support:
+• Add a product
+• Update a product's stock quantity
+• Search by category
+• Total inventory value (sum of quantity × price across all products)
+• Low-stock alerts (quantity below a threshold)
+• A summary report grouped by category
+
+Example:
+
+Low stock (< 5):
+  - Pen (3 left)
+
+Category: Stationery
+  Notebook  x20  @ Rs 60
+  Pen       x3   @ Rs 15
+
+Total inventory value: Rs 1245
+"""        

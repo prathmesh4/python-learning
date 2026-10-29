@@ -44,3 +44,21 @@ def load_config():
 config = load_config()
 
 print("\nReturned config:", config)
+
+"""Robust Config Reader
+Layered error handling with fallbacks
+Write a function that reads a JSON config file and ALWAYS returns a usable config, handling every failure with sensible defaults:
+• file not found  -> create it with the defaults
+• invalid JSON    -> warn, then use the defaults
+• missing keys    -> fill them in from the defaults
+• wrong types (e.g. a string where a number is expected) -> replace with the default
+
+Example:
+
+defaults = {'volume': 50, 'theme': 'dark', 'notifications': True}
+
+(config.json is corrupted)
+-> "Warning: bad JSON, using defaults"
+
+Returned config: {'volume': 50, 'theme': 'dark', 'notifications': True}
+"""

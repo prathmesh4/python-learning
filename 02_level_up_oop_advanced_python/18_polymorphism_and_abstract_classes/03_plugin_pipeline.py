@@ -159,3 +159,48 @@ print(text3)
 result3 = pipeline3.run(text3)
 print("Final output:")
 print(result3)
+
+"""Plugin Pipeline
+Abstract plugin system where new functionality is added without changing existing code
+Build a plugin-based text processing system.
+
+Abstract class: Plugin(ABC)
+- Abstract methods: initialize(), execute(data), cleanup()
+- Concrete method: get_name() — returns the class name
+
+Concrete plugins:
+- UppercasePlugin — converts all text to uppercase
+- FilterPlugin(keyword) — removes lines containing the keyword
+- SortPlugin(reverse=False) — sorts lines alphabetically
+- NumberPlugin — prepends line numbers to each line
+- UniquePlugin — removes duplicate lines
+
+Pipeline class (NOT abstract — this is the runner):
+- __init__() — holds a list of plugins
+- add_plugin(plugin) — adds a plugin to the pipeline
+- run(data) — calls initialize() on all plugins, then passes data through each plugin's execute() in sequence (output of one is input to next), then calls cleanup() on all. Returns final result.
+- display_pipeline() — prints the ordered list of plugin names
+
+Demonstrate:
+1. Create a pipeline with: Uppercase → Sort → Number
+2. Run it on a multi-line string (at least 6 lines)
+3. Show the intermediate output after each plugin (print inside execute)
+4. Create a DIFFERENT pipeline with: Filter("error") → Unique → Sort
+5. Run it on different data
+6. Show that adding a new plugin (e.g., ReversePlugin that reverses each line) requires ZERO changes to the Pipeline class
+
+Example output:
+
+Pipeline: UppercasePlugin → SortPlugin → NumberPlugin
+
+Input:
+banana
+apple
+cherry
+apple
+date
+
+After UppercasePlugin: BANANA, APPLE, CHERRY, APPLE, DATE
+After SortPlugin: APPLE, APPLE, BANANA, CHERRY, DATE
+After NumberPlugin: 1. APPLE, 2. APPLE, 3. BANANA, 4. CHERRY, 5. DATE
+"""
