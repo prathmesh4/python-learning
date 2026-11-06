@@ -1,0 +1,4 @@
+
+# Personal Finance Tracker
+# No external dependencies required.
+# Python 3.8+
